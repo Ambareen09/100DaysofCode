@@ -52,7 +52,7 @@ General Formulas to solve problems related to Arithmetic Progressions: If ‘a�
 General Formulas to solve problems related to Geometric Progressions:
 
 If ‘a’ is the first term and ‘r’ is the common ratio:
-1.nth term of a GP = a*rn-1.
+1.nth term of a GP = a*r^n-1.
 2.Geometric Mean = nth root of product of n terms in the GP.
 3.Sum of ‘n’ terms of a GP (r < 1) = [a (1 – r^n)] / [1 – r].
 4.Sum of ‘n’ terms of a GP (r > 1) = [a (r^ – 1)] / [r – 1].
