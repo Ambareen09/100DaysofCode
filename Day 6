@@ -1,0 +1,116 @@
+Today I solved problems using the concept of bitwise operations.
+
+1. Given an integer an N. The task is to return the position of first set bit found from the right side in the binary representation of the number.
+Note: If there is no set bit in the integer N, then return 0 from the function.  
+
+Example 1:
+
+Input: N = 18
+Output: 2
+Explanation: Binary representation of 18 is 010010,
+the first set bit from the right side is at position
+Expected Time Complexity: O(log N).
+Expected Auxiliary Space: O(1).
+
+Constraints:
+0 <= N <= 106
+
+unsigned int getFirstSetBit(int n)
+{
+    
+    // Your code here
+    return log2(n & -n) + 1; 
+    
+    
+}
+
+
+2.Given two numbers M and N. The task is to find the position of the rightmost different bit in the binary representation of numbers.
+
+Example 1: 
+
+Input: M = 11, N = 9
+Output: 2
+Explanation: Binary representation of the given 
+numbers are: 1011 and 1001, 
+2nd bit from right is different.
+Expected Time Complexity: O(max(log m, log n)).
+Expected Auxiliary Space: O(1).
+
+Constraints:
+1 <= M <= 103
+1 <= N <= 103
+
+int posOfRightMostDiffBit(int m, int n)
+{
+    
+    // Your code here
+    return ffs(m^n);
+    
+    
+}
+
+
+3. Given a number N and a bit number K, check if Kth bit of N is set or not. A bit is called set if it is 1. Position of set bit '1' should be indexed starting with 0 from LSB side in binary representation of the number.
+Example, Consider N = 4(100):  0th bit = 0, 1st bit = 0, 2nd bit = 1.
+
+Example 1:
+
+Input: N = 4, K = 0
+Output: false
+Explanation: Binary representation of 4 is 100, 
+in which 0th bit from LSB is not set. 
+So, return false.
+Expected Time Complexity: O(1).
+Expected Auxiliary Space: O(1).
+
+Constraints:
+1 ≤ N ≤ 109
+0 ≤ K ≤ floor(log2(N) + 1)
+
+bool checkKthBit(int n, int k)
+{
+    
+    // Your code here
+    // It can be a one liner logic!! Think of it!!
+    if (n&(1<<k))
+    return true;
+    else
+    return false;
+    
+}
+
+
+4.You are given a number N. Find the total count of set bits for all numbers from 1 to N(both inclusive).
+
+Example 1:
+
+Input: N = 4
+Output: 5
+Explanation:
+For numbers from 1 to 4.
+For 1: 0 0 1 = 1 set bits
+For 2: 0 1 0 = 1 set bits
+For 3: 0 1 1 = 2 set bits
+For 4: 1 0 0 = 1 set bits
+Therefore, the total set bits is 5.
+Expected Time Complexity: O(log N).
+Expected Auxiliary Space: O(1).
+
+Constraints:
+1 ≤ N ≤ 106
+
+int countSetBits(int N)
+{
+    // Your logic here
+    int two = 2,ans = 0; 
+    int n = N; 
+    while(n){ 
+        ans += (N/two)*(two>>1); 
+        if((N&(two-1)) > (two>>1)-1) ans += (N&(two-1)) - (two>>1)+1; 
+        two <<= 1; 
+        n >>= 1; 
+    } 
+    return ans; 
+}
+
