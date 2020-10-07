@@ -7,7 +7,7 @@ If ‘a’ is the first term and ‘d’ is the common difference:\
 3.Sum of ‘n’ terms of an AP = 0.5 n (first term + last term) = 0.5 n [ 2a + (n-1) d ].
 
 
-**General Formulas to solve problems related to Geometric Progressions:
+**General Formulas to solve problems related to Geometric Progressions:**
 
 If ‘a’ is the first term and ‘r’ is the common ratio:\
 1.nth term of a GP = a*r^n-1.\
@@ -16,7 +16,7 @@ If ‘a’ is the first term and ‘r’ is the common ratio:\
 4.Sum of ‘n’ terms of a GP (r > 1) = [a (r^ – 1)] / [r – 1].\
 5.Sum of infinite terms of a GP (r < 1) = (a) / (1 – r).
 
-**Formula for finding Median :
+**Formula for finding Median :**
 
 
 If the count of numbers is odd: After sorting the sequence,\
@@ -25,7 +25,7 @@ If the count of numbers is even: After sorting the sequence,\
 Median  =  Average of (N/2)th and {(N/2) + 1}th value.
 
 
-**Important Properties of Permutation:
+**Important Properties of Permutation:**
 
 
 n P n = n*(n-1)*(n-2)*......*1 = n!\
