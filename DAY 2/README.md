@@ -1,51 +1,9 @@
-1. FINIDING DIGITS IN A NUMBER
+**General Formulas to solve problems related to Arithmetic Progressions:**/
+If ‘a’ is the first term and ‘d’ is the common difference:
 
-Given an integral number N. The task is to find the count of digits present in this number.
 
-Let's say:
-N = 1854
-
-Number of digits in N here is 4 and,
-the digits are: 1,8,5,4.
-
-Naive solution:
-int count(int n)
-{
-  c=0;
-  while(n!=0)
-  {
-    n=n/10;
-    ++c;
-   }
-   return c;
-  }
-  
-  Time complextity: O(c)
-  
-  Logarithmic solution:
-  
-  int count(int n)
-  {
-    return floor(log10(n)+1)
-   }
-   
-   Derivation: Suppose the number of digits in the number N is K.
-
-Therefore, we can say that:
-10^K-1 <= N < 10^K
-Applying base-10 logarithm to both sides in the above equation, we get:
-K-1 <= log10(N) < K.
-
-or, K - 1 + 1 <= log10(N) + 1 < K + 1
-or, K <= log10(N) + 1 < K + 1 
-Therefore,
-K = floor(log10(N) + 1)
-  *Time complextity: O(1)*
-  
-  
-General Formulas to solve problems related to Arithmetic Progressions: If ‘a’ is the first term and ‘d’ is the common difference:
-1.nth term of an AP = a + (n-1)*d.
-2.Arithmetic Mean = Sum of all terms in the AP / Number of terms in the AP.
+1.nth term of an AP = a + (n-1)*d./
+2.Arithmetic Mean = Sum of all terms in the AP / Number of terms in the AP./
 3.Sum of ‘n’ terms of an AP = 0.5 n (first term + last term) = 0.5 n [ 2a + (n-1) d ].
 
 
