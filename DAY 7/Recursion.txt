@@ -1,0 +1,13 @@
+Recursion:
+
+What is Recursion?
+
+The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called as recursive function. Using recursive algorithm, certain problems can be solved quite easily. Examples of such problems are Towers of Hanoi (TOH), Inorder/Preorder/Postorder Tree Traversals, DFS of Graph, etc.
+What is base condition in recursion?
+
+In recursive program, the solution to base case is provided and solution of bigger problem is expressed in terms of smaller problems.
+Why Stack Overflow error occurs in recursion? If base case is not reached or not defined, then stack overflow problem may arise.
+
+Disadvantage of Recursion: Note that both recursive and iterative programs have same problem solving powers, i.e., every recursive program can be written iteratively and vice versa is also true. Recursive program has greater space requirements than iterative program as all functions will remain in stack until base case is reached. It also has greater time requirements because of function calls and return overhead.
+
+Advantages of Recursion: Recursion provides a clean and simple way to write code. Some problems are inherently recursive like tree traversals, Tower of Hanoi, etc. For such problems it is preferred to write recursive code. We can write such codes also iteratively with the help of stack data structure.
