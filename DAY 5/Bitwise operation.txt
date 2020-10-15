@@ -1,6 +1,3 @@
-Today I learnt about bitwise operation.
-
-
 The operators that works at Bit level are called bitwise operators. In general there are six types of Bitwise Operators as described below:
 
 1.  & (bitwise AND) Takes two numbers as operands and does AND on every bit of two numbers. The result of AND is 1 only if both bits are 1. Suppose A = 5 and B = 3, therefore A & B = 1.
@@ -15,64 +12,3 @@ IMPORTANT:
 The bitwise XOR operator is the most useful operator from technical interview perspective.
 In c++ we dont have standadized size for int, so it can be 32 bits or 64 bits or even in some cases 16 bits(usually in old machines).
 The left shift and right shift operators cannot be used with negative numbers.
-
-1. To check the kth bit is set or not:
- 
-#include <iostream> 
-using namespace std; 
-
-void isKthBitSet(int n, int k) 
-{ 
-	if ((n >> (k - 1)) & 1) 
-		cout << "SET"; 
-	else
-		cout << "NOT SET"; 
-} 
-
-
-
-2. Powers of two:
-
-bool isPow2(int n)
-{
-    if(n == 0)
-        return true;
-    
-    return ((n & (n - 1)) == 0);
-}
-
-
-3. One odd occuring:
-
-int findOdd(int arr[], int n)
-{
-    int res = 0;
-    
-    for(int i = 0; i < n; i++)
-    {
-        res = res ^ arr[i];
-    }
-    
-    return res;
-}
-
-
-4. Power Set of a given Set :
-
-void printPowerSet(string str)
-{
-	int n = str.length();
-
-	int powSize = pow(2, n);
-
-	for(int counter = 0; counter < powSize; counter++)
-	{
-		for(int j = 0; j < n; j++)
-		{
-			if((counter & (1 << j)) != 0)
-                cout<<str[j];
-		}
-		
-		cout<<endl;
-	}
-}
